@@ -16,7 +16,6 @@ export default {
     HelloWorld,
     TestVue,
     NewDay0421
-    
   }
 }
 </script>
