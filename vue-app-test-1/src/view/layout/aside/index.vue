@@ -16,7 +16,6 @@ export default {
 </script>
 
 <script setup>
-    console.log('env', import.meta.env.VITE_CLI_PORT)
     // const Test11 = import.meta.env.VITE_CLI_PORT
 </script>
 
