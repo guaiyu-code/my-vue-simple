@@ -3,7 +3,9 @@
     <el-aside width="200px"> 
         <LaoutAside />
     </el-aside>
-    <el-main> main </el-main>
+    <el-main> 
+        <router-view></router-view>     
+    </el-main>
 </el-container>
 </template>
 
@@ -14,7 +16,7 @@ export default {
 </script>
 
 <script setup>
-console.log(process.env)
+console.log(import.meta.env)
 console.log(process.env)
 
 import LaoutAside from '@/view/layout/aside/index.vue'
