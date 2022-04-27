@@ -4,6 +4,7 @@
         <LaoutAside />
     </el-aside>
     <el-main> 
+        fuck
         <router-view></router-view>     
     </el-main>
 </el-container>
