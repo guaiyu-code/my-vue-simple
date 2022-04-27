@@ -5,7 +5,8 @@
             <el-menu-item index=""> {{ Test11 }}</el-menu-item>
           </el-submenu>
           <el-menu-item index=""> 312121 </el-menu-item>
-          <el-menu-item index=""> <button @click="clictMenu()"></button> </el-menu-item>
+          <el-menu-item index=""> <el-button @click="clictMenu()"> fuck menu </el-button> </el-menu-item>
+          <el-menu-item index=""> <el-button @click="routeHello()"> fuck hello </el-button></el-menu-item>
         </el-menu>
     </el-scrollbar>
 </template>
@@ -21,6 +22,8 @@ export default {
     // const Test11 = import.meta.env.VITE_CLI_PORT
     import { getMenuList } from '@/api/menu'
     import { ref } from 'vue'
+    import { useRouter } from 'vue-router'
+    const router = useRouter()
     const page = ref(1)
     const total = ref(0)
     const pageSize = ref(999)
@@ -32,6 +35,11 @@ export default {
 
     const clictMenu = () => {
         getTableData(getMenuList)
+    }
+
+    const routeHello = () => {
+        console.log(router.getRoutes())
+        router.push({name: 'testHello'})
     }
     
 </script>
