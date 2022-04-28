@@ -17,8 +17,5 @@ export default {
 </script>
 
 <script setup>
-console.log(import.meta.env)
-console.log(process.env)
-
 import LaoutAside from '@/view/layout/aside/index.vue'
 </script>

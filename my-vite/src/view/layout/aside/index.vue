@@ -7,11 +7,14 @@
           <el-menu-item index=""> 312121 </el-menu-item>
           <el-menu-item index=""> <el-button @click="clictMenu()"> fuck menu </el-button> </el-menu-item>
           <el-menu-item index=""> <el-button @click="routeHello()"> fuck hello </el-button></el-menu-item>
+          <el-menu-item index=""> <el-button @click="newDay0421()"> newDay0421 </el-button></el-menu-item>
+          <el-menu-item index=""> <el-button @click="testVue()"> testVue </el-button></el-menu-item>
         </el-menu>
     </el-scrollbar>
 </template>
 
 <script>
+
 export default {
     name : 'LaoutAside'
 }
@@ -19,27 +22,39 @@ export default {
 </script>
 
 <script setup>
-    // const Test11 = import.meta.env.VITE_CLI_PORT
-    import { getMenuList } from '@/api/menu'
-    import { ref } from 'vue'
-    import { useRouter } from 'vue-router'
+
+import { getMenuList } from '@/api/menu'
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { useRouterStore } from '@/pinia/modules/router'
+
     const router = useRouter()
     const page = ref(1)
     const total = ref(0)
     const pageSize = ref(999)
+    const routerStore = useRouterStore()
+    const userStore = useUserStore()
+
     //查询 
     const getTableData = async(f = () => {}) => {
         const table = await f({ page : page.value, pageSize: pageSize.value})
-        console.log(table)
     }
 
     const clictMenu = () => {
         getTableData(getMenuList)
     }
 
-    const routeHello = () => {
-        console.log(router.getRoutes())
+    const routeHello = async() => {
+        await routerStore.SetAsyncRouter()
         router.push({name: 'testHello'})
+    }
+
+    const newDay0421 = () => {
+        router.push({name: 'newDay0421'})
+    }
+
+    const testVue = () => {
+        router.push({name: 'testVue'})
     }
     
 </script>

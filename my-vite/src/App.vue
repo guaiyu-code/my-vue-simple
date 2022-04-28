@@ -1,8 +1,4 @@
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-  <!-- <TestVue testMsg="fuck you" testHtml1='<span style="color: red">This should be red.</span>' activeClass="fdfd" errorClass="232"></TestVue> -->
-  <!-- <NewDay0421 /> -->
     <LayoutInit></LayoutInit>
 </template>
 
