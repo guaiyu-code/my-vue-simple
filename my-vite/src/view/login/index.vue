@@ -1,0 +1,10 @@
+<template>
+    fuck login
+    <router-view></router-view>
+</template>
+
+<script>
+export default {
+    name: 'Login'
+}
+</script>

@@ -1,6 +1,9 @@
 <template>
     <el-scrollbar>
         <el-menu default-active="">
+          <template v-for="item in routerStore.asyncRouters[0].children">
+               {{ item }}
+          </template>
           <el-submenu index="">
             <el-menu-item index=""> {{ Test11 }}</el-menu-item>
           </el-submenu>
@@ -33,8 +36,9 @@ import { useRouterStore } from '@/pinia/modules/router'
     const total = ref(0)
     const pageSize = ref(999)
     const routerStore = useRouterStore()
-    const userStore = useUserStore()
-
+    //执行一次
+    routerStore.SetAsyncRouter()
+    console.log(routerStore.asyncRouters)
     //查询 
     const getTableData = async(f = () => {}) => {
         const table = await f({ page : page.value, pageSize: pageSize.value})
@@ -45,7 +49,6 @@ import { useRouterStore } from '@/pinia/modules/router'
     }
 
     const routeHello = async() => {
-        await routerStore.SetAsyncRouter()
         router.push({name: 'testHello'})
     }
 
