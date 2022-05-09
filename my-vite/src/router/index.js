@@ -5,11 +5,11 @@ const routes = [
         name: 'testHello',
         component: () => import('@/view/layout/test/helloWorld.vue')
     },
-    {
+/*     {
         path: '/test/newDay0421',
         name: 'newDay0421',
         component: () => import('@/view/layout/test/NewDay0421.vue')
-    },
+    }, */
     {
         path: '/test/testVue',
         name: 'testVue',
@@ -17,8 +17,8 @@ const routes = [
     }, 
 
     {
-        path: '/test/login',
-        name: 'login',
+        path: '/login',
+        name: 'Login',
         component: () => import('@/view/login/index.vue')
     }, 
 ]

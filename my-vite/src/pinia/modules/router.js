@@ -24,6 +24,8 @@ export const useRouterStore = defineStore(
     id : 'router', 
     state : () => {
         const asyncRouters = ref([])
+        //是否登录
+        const isAuthenticated = ref(false)
         const routerList = ref(routerListArr)
         const routeMap = ({})
         const SetAsyncRouter = async() => {
@@ -34,13 +36,20 @@ export const useRouterStore = defineStore(
                 meta: {
                 title: '底层layout'
                 },
-                children: []
+                children: [{
+                    path: '/test/newDay0421',
+                    name: 'newDay0421',
+                    component: 'view/layout/test/NewDay0421.vue',
+                    meta: {
+                    title: '0421'
+                    },
+                }]
             }]
             //获取后台模板
             const asyncRouterRes = await asyncMenu()
             const asyncRouter = asyncRouterRes.data.menus
             formatRouter(asyncRouter, routeMap)
-            baseRouter[0].children = asyncRouter
+            // baseRouter[0].children = asyncRouter
             baseRouter.push({
                 path: '/:catchAll(.*)',
                 redirect: '/layout/404'
@@ -56,6 +65,7 @@ export const useRouterStore = defineStore(
             SetAsyncRouter,
             routerList,
             routeMap,
+            isAuthenticated
         }
     }
 })

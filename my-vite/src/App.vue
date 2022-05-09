@@ -1,5 +1,6 @@
 <template>
-    <LayoutInit></LayoutInit>
+    <!-- <LayoutInit></LayoutInit> -->
+    <router-view />
 </template>
 
 <script>
@@ -10,12 +11,12 @@ import LayoutInit from '@/view/layout/index.vue'
 
 export default {
   name: 'App',
-  components: {
+ /*  components: {
       LayoutInit,
     // HelloWorld,
     // TestVue,
     // NewDay0421
-  }
+  } */
 }
 </script>
 

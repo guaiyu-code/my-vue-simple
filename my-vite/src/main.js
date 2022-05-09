@@ -5,6 +5,7 @@ import App from './App.vue'
 import ElementPlus from 'element-plus'
 import { store } from '@/pinia'
 import router from '@/router/index'
+import '@/permission'
 
 const app = createApp(App)
 

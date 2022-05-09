@@ -12,7 +12,7 @@ service.interceptors.request.use(
     config => {
         config.headers = {
             'Content-Type': 'application/json',
-            'x-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVVUlEIjoiZGIzNDk2ZWUtNzA5MS00N2YyLWIyNzMtNTIyYTEwNjEzZThiIiwiSUQiOjEsIlVzZXJuYW1lIjoiYWRtaW4iLCJOaWNrTmFtZSI6Iui2hee6p-euoeeQhuWRmCIsIkF1dGhvcml0eUlkIjoiODg4IiwiQnVmZmVyVGltZSI6ODY0MDAsImV4cCI6MTY1MTU2OTYxNCwiaXNzIjoicW1QbHVzIiwibmJmIjoxNjUwOTYzODE0fQ.7kCleJWcMgomz2nAHrAM-AQ476SEOl22fIJXqjYP20g',
+            'x-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVVUlEIjoiZGIzNDk2ZWUtNzA5MS00N2YyLWIyNzMtNTIyYTEwNjEzZThiIiwiSUQiOjEsIlVzZXJuYW1lIjoiYWRtaW4iLCJOaWNrTmFtZSI6Iui2hee6p-euoeeQhuWRmCIsIkF1dGhvcml0eUlkIjoiODg4IiwiQnVmZmVyVGltZSI6ODY0MDAsImV4cCI6MTY1MjY3MTgwMywiaXNzIjoicW1QbHVzIiwibmJmIjoxNjUyMDY2MDAzfQ.vOS6-vJZ-zQkbNJE6yg0iTxj-LODd1bX_1rHjczrXcw',
             'x-user-id': 1,
             ...config.headers
         }
