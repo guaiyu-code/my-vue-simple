@@ -1,9 +1,9 @@
 <template>
     <el-scrollbar>
         <el-menu default-active="">
-           <!--  <template v-for="item in routerStore.asyncRouters[0].children"> 
+           <template v-for="item in routerStore.asyncRouters[0].children"> 
                 {{ item }} 
-           </template>   -->
+           </template>  
           <el-submenu index="">
             <el-menu-item index=""> {{ Test11 }}</el-menu-item>
           </el-submenu>
@@ -47,7 +47,7 @@ import { useRouterStore } from '@/pinia/modules/router'
         getTableData(getMenuList)
     }
 
-    const routeHello = async() => {
+    const routeHello = () => {
         router.push({name: 'testHello'})
     }
 

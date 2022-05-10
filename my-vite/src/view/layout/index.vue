@@ -4,8 +4,13 @@
         <LaoutAside />
     </el-aside>
     <el-main> 
-        fuck
-        <router-view></router-view>     
+       <router-view v-slot="{ Component }">
+            <transition name="el-zoom-in-center">
+                <keep-alive>
+                    <component :is="Component" />
+                </keep-alive>
+            </transition>
+        </router-view>
     </el-main>
 </el-container>
 </template>

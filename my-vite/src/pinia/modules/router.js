@@ -41,7 +41,23 @@ export const useRouterStore = defineStore(
                     name: 'newDay0421',
                     component: 'view/layout/test/NewDay0421.vue',
                     meta: {
-                    title: '0421'
+                        title: '0421'
+                    },
+                },
+                {
+                    path: '/test/helloWorld',
+                    name: 'testHello',
+                    component: 'view/layout/test/HelloWorld.vue',
+                    meta: {
+                        title: 'testHello'
+                    },
+                },
+                {
+                    path: '/test/testVue',
+                    name: 'testVue',
+                    component: 'view/layout/test/TestVue.vue',
+                    meta: {
+                        title: 'testVue'
                     },
                 }]
             }]
@@ -49,7 +65,7 @@ export const useRouterStore = defineStore(
             const asyncRouterRes = await asyncMenu()
             const asyncRouter = asyncRouterRes.data.menus
             formatRouter(asyncRouter, routeMap)
-            // baseRouter[0].children = asyncRouter
+            baseRouter[0].children = baseRouter[0].children.concat(asyncRouter)
             baseRouter.push({
                 path: '/:catchAll(.*)',
                 redirect: '/layout/404'
