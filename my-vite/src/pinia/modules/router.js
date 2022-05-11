@@ -39,6 +39,7 @@ export const useRouterStore = defineStore(
                 children: [{
                     path: '/test/newDay0421',
                     name: 'newDay0421',
+                    hidden: false,
                     component: 'view/layout/test/NewDay0421.vue',
                     meta: {
                         title: '0421'
@@ -47,6 +48,7 @@ export const useRouterStore = defineStore(
                 {
                     path: '/test/helloWorld',
                     name: 'testHello',
+                    hidden: false,
                     component: 'view/layout/test/HelloWorld.vue',
                     meta: {
                         title: 'testHello'
@@ -55,6 +57,7 @@ export const useRouterStore = defineStore(
                 {
                     path: '/test/testVue',
                     name: 'testVue',
+                    hidden: false,
                     component: 'view/layout/test/TestVue.vue',
                     meta: {
                         title: 'testVue'

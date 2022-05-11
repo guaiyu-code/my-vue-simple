@@ -2,7 +2,7 @@
     <el-scrollbar>
         <el-menu default-active="">
            <template v-for="item in routerStore.asyncRouters[0].children"> 
-                {{ item }} 
+                <AsideComponent v-if="!item.hidden" :key="item.name" :router-info="item"/>
            </template>  
           <el-submenu index="">
             <el-menu-item index=""> {{ Test11 }}</el-menu-item>
@@ -30,6 +30,7 @@ import { getMenuList } from '@/api/menu'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useRouterStore } from '@/pinia/modules/router'
+import AsideComponent from '@/view/layout/aside/asideComponent/index.vue';
 
     const router = useRouter()
     const page = ref(1)
